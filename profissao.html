@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Serviço</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/profissao.css">
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+  <script src="js/firebase-config.js"></script>
+</head>
+<body>
+
+  <!-- TOPO COM IMAGEM + TEXTO -->
+  <section class="cabecalho-flex">
+    <div class="imagem-wrapper">
+      <img id="imagem-profissao" src="" alt="Imagem da profissão">
+    </div>
+    <div class="texto-wrapper">
+      <h1 id="titulo-profissao">Profissão</h1>
+      <p id="descricao-profissao">Descrição da profissão</p>
+      <div class="botoes-profissao">
+        <button class="btn-learn">Saiba mais</button>
+        <button class="btn-servicos" onclick="document.getElementById('lista-profissionais').scrollIntoView({ behavior: 'smooth' })">Ver profissionais</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTEÚDO SOBRE A PROFISSÃO -->
+  <section class="conteudo-profissao">
+    <h2>Sobre a profissão</h2>
+    <p id="texto-profissao"></p>
+  </section>
+
+  <!-- LISTA DE PROFISSIONAIS -->
+  <section class="profissionais">
+    <h2>Profissionais disponíveis</h2>
+    <ul id="lista-profissionais" class="lista-profissionais"></ul>
+  </section>
+
+  
+
+  <script src="js/profissao.js" defer></script>
+</body>
+</html>
